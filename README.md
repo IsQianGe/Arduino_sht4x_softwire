@@ -3,6 +3,7 @@ A simple Arduino library for the Sensirion SHT4x humidity and temperature sensor
 
 # Installation
 Create a SHT4x folder in your Arduino/libraries folder and copy the content of this repository in it. Then, restart the interface.
+Alternatively, you can download the latest release [here](https://github.com/vpaeder/sensirion_sht4x/releases/tag/v1.0.0) and unpack it in your Arduino/library folder (and then restart the interface as well).
 
 # How to use it
 There's an example in the *examples* folder that can be opened straight from the Arduino interface.
