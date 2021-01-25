@@ -1,5 +1,5 @@
 # SHT4x for Arduino
-A simple Arduino library for the Sensirion SHT4x humidity and temperature sensors (SHT40, SHT41, SHT45).
+A simple Arduino library for the Sensirion SHT4x humidity and temperature sensors (SHT40, SHT41, SHT45). These are tiny sensors with an I2C interface. I've used some for my own projects and thought to clean up and release my code, in case it can save anyone some time. I'm not connected with Sensirion in any manner, so if you'd like details about the sensor itself you may want to visit their webpage instead.
 
 # Installation
 Create a SHT4x folder in your Arduino/libraries folder and copy the content of this repository in it.
