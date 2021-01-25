@@ -1,0 +1,51 @@
+#######################################
+# Syntax Coloring Map
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+SHT4x KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+SHT4x KEYWORD2
+checkCRC KEYWORD2
+setChipType KEYWORD2
+getChipType KEYWORD2
+setPort KEYWORD2
+setMode KEYWORD2
+getMode KEYWORD2
+softReset KEYWORD2
+checkSerial KEYWORD2
+measure KEYWORD2
+TtoDegC KEYWORD2
+TtoDegF KEYWORD2
+RHtoPercent KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+SHT4X_CHIPTYPE_A LITERAL1
+SHT4X_CHIPTYPE_B LITERAL1
+
+SHT4X_CMD_SFT_RST LITERAL1
+SHT4X_CMD_READ_SERIAL LITERAL1
+
+SHT4X_CMD_MEAS_HI_PREC LITERAL1
+SHT4X_CMD_MEAS_MED_PREC LITERAL1
+SHT4X_CMD_MEAS_LOW_PREC LITERAL1
+SHT4X_CMD_HI_HEAT_1S_MEAS LITERAL1
+SHT4X_CMD_HI_HEAT_01S_MEAS LITERAL1
+SHT4X_CMD_MED_HEAT_1S_MEAS LITERAL1
+SHT4X_CMD_MED_HEAT_01S_MEAS LITERAL1
+SHT4X_CMD_LOW_HEAT_1S_MEAS LITERAL1
+SHT4X_CMD_LOW_HEAT_01S_MEAS LITERAL1
+
+SHT4X_STATUS_OK LITERAL1
+SHT4X_STATUS_ERROR LITERAL1
+SHT4X_STATUS_CRC_FAIL LITERAL1
