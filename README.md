@@ -9,3 +9,8 @@ Alternatively, you can download the latest release [here](https://github.com/vpa
 There's an example in the *examples* folder that can be opened straight from the Arduino interface.
 For further details, you may refer to the comments and descriptions in SHT4x.h or ask me.
 I've tested it on Arduino (Mega, Nano) and ESP32. I'm interested to know of any return on experience for other platforms compatible with the Arduino toolchain.
+
+# Wiring example: ESP32 with SHT40 breakout board
+To illustrate how to connect the sensor with an ESP32, I take my own breakout board as an example. What's especially important here is that **the sensor works with 3.3V**. Don't connect VDD with 5V, or you'll likely burn your sensor. The I2C pins, on ESP32, are by default assigned to pins 21 (SDA) and 22 (SCL). They'll be placed elsewhere on other boards (e.g. D20 and D21 on Arduino Mega 2560, A4 and A5 for Arduino Nano, more details [here](https://www.arduino.cc/en/Reference/Wire)). You can see an example for ESP32-Devkit-C below.
+![Wiring diagram for ESP32-Devkit-C](https://user-images.githubusercontent.com/6388158/125589786-1f625cb6-cfa0-4525-9944-ddfc16c91341.png)
+
