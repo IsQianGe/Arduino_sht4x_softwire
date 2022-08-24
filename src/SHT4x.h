@@ -8,7 +8,7 @@ Arduino library for the Sensirion SHT4x humidity and temperature sensors (SHT40,
 #define SHT4X_H
 
 #include <Arduino.h>
-#include <Wire.h>
+#include "SoftwareI2C.h"
 
 /** \typedef SHT4X_ChipTypes_TypeDef
  *  \brief Chip type: there're 2 versions with different addresses. Those marked A have address 0x44, those marked B 0x45.
@@ -71,10 +71,10 @@ typedef enum {
  */
 class SHT4x {
 protected:
-  /** \property TwoWire* _i2c
+  /** \property SoftwareI2C* _i2c
    *  \brief Underlying I2C channel object
    */
-  TwoWire*  _i2c = &Wire;
+  SoftwareI2C*  _i2c;
 
   /** \property SHT4X_MeasurementModes_TypeDef _measurement_mode
    *  \brief Measurement mode (see SHT4X_MeasurementModes_TypeDef definition for details)
@@ -148,12 +148,12 @@ public:
    */
   uint16_t serial[2];
   
-  /** \fn SHT4X_Status_TypeDef setPort(TwoWire &wirePort)
+  /** \fn SHT4X_Status_TypeDef setPort(SoftwareI2C &wirePort)
    *  \brief Set I2C port instance.
    *  \param wirePort : I2C Wire port instance over which to communicate with the sensor.
    *  \returns a status code telling whether a sensor was found on this port.
    */
-  SHT4X_Status_TypeDef setPort(TwoWire &wirePort);
+  SHT4X_Status_TypeDef setPort(SoftwareI2C &wirePort);
     
   /** \fn bool checkCRC(uint16_t data, uint8_t crc)
    *  \brief Check a CRC checksum against a given value.

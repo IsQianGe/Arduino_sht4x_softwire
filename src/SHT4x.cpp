@@ -47,11 +47,10 @@ SHT4X_Status_TypeDef 	SHT4x::sendCommand(SHT4X_MeasurementModes_TypeDef cmd) {
 }
 
 
-SHT4X_Status_TypeDef SHT4x::setPort(TwoWire &wirePort) {
+SHT4X_Status_TypeDef SHT4x::setPort(SoftwareI2C &wirePort) {
   // we store the I2C port reference here instead of in constructor as it allows
   // defining objects globally
 	this->_i2c = &wirePort;
-	this->_i2c->begin();
   return this->checkSerial();
 }
 
